@@ -8,46 +8,6 @@ import { useChat } from 'ai/react'
 import { ScrollArea } from "@/components/ui/scroll-area";
 import Image from "next/image";
 
-const customer = {
-    data: {
-        "id": 3990101,
-        "name": "NICOLAS SILVEIRA SEGATTO",
-        "primaryDocumentNumber": "13287098683",
-        "status": "ATIVO",
-        "motherName": "REGINA MARCIA DA SILVEIRA",
-        "birthDate": "1997-03-24 00:00:00",
-        "alternateName": "NICOLAS SEGATTO",
-        "email": "nicolasssegatto@gmail.com",
-    },
-    products: [
-        {
-            "lineOfBusiness": "TELEFONIA MOVEL",
-            "productId": 123632,
-            "paymentMode": "POSPAGO",
-            "assetId": 285584634,
-            "contractNumber": "034996302403",
-            "productFullName": "Celular - 50 GB Associado - Associado - Ilimitado Associado",
-            "serviceId": "034996302403",
-            "productName": "Celular",
-            "status": "ATIVO"
-        },
-        {
-            "lineOfBusiness": "COMUNICACAO DADOS",
-            "productId": 124901,
-            "paymentMode": "POSPAGO",
-            "assetId": 352143214,
-            "contractNumber": "09357678",
-            "productFullName": "Banda Larga - Convencional - 600 mb",
-            "serviceId": "09357678",
-            "productName": "Banda Larga",
-            "status": "ATIVO"
-        },
-    ]
-}
-
-const messageInitial = `você é um atendente de callcenter de uma empresa de telecom, os dados do cliente são: ${JSON.stringify(customer)}`
-
-
 export function Chat() {
     const { messages, input, handleInputChange, handleSubmit } = useChat({
         api: '/api/chat',
